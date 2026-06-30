@@ -1,10 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelvin Holman — Software Engineer</title>
+<style>
+  :root{
+    --navy:#10233f;
+    --navy-2:#16335c;
+    --paper:#eef1f3;
+    --paper-2:#ffffff;
+    --line:#c7d0d9;
+    --amber:#d97b29;
+    --ink:#1b242f;
+    --ink-soft:#5b6675;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+  }
+  /* faint blueprint grid */
+  .grid-bg{
+    position:fixed; inset:0; z-index:-1;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
       linear-gradient(90deg, var(--line) 1px, transparent 1px);
     background-size:36px 36px;
     opacity:0.35;
   }
   a{color:inherit;}
   .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
- 
+
   /* ---- NAV ---- */
   nav{
     position:sticky; top:0; z-index:10;
@@ -17,7 +50,7 @@
   .nav-links{display:flex; gap:22px; font-family:var(--mono); font-size:12.5px; letter-spacing:0.03em;}
   .nav-links a{text-decoration:none; color:var(--ink-soft); padding:4px 0; border-bottom:1px solid transparent; transition:border-color .15s, color .15s;}
   .nav-links a:hover{color:var(--navy); border-color:var(--amber);}
- 
+
   /* ---- HERO ---- */
   header.hero{padding:88px 0 64px; position:relative;}
   .eyebrow{
@@ -49,7 +82,7 @@
   .btn.primary:hover{background:var(--navy-2);}
   .btn.ghost{color:var(--navy); background:transparent;}
   .btn.ghost:hover{background:var(--navy); color:#fff;}
- 
+
   /* ---- SECTION SHELL ---- */
   section{padding:56px 0;}
   .section-head{
@@ -63,7 +96,7 @@
     color:var(--navy); margin:0; font-family:var(--mono); font-weight:600;
   }
   .rule{flex:1; height:1px; background:var(--line);}
- 
+
   /* ---- PROJECT CARD ---- */
   .project{
     background:var(--paper-2);
@@ -91,7 +124,7 @@
     background:#dde6ee; border:1px solid var(--line);
     padding:3px 9px; border-radius:20px; white-space:nowrap;
   }
- 
+
   /* schematic diagram */
   .schematic{
     margin-top:18px; padding:18px; background:var(--navy); border-radius:4px;
@@ -102,7 +135,7 @@
     border:1px solid #3d5a82; padding:7px 11px; border-radius:3px; background:#16335c; white-space:nowrap;
   }
   .schematic .arrow{padding:0 8px; color:var(--amber);}
- 
+
   /* ---- SKILLS ---- */
   .skills-grid{
     display:grid; grid-template-columns:repeat(2,1fr); gap:18px 28px;
@@ -115,7 +148,7 @@
   .tag{
     font-size:13px; padding:5px 10px; background:var(--paper-2); border:1px solid var(--line); border-radius:3px;
   }
- 
+
   /* ---- EXPERIENCE / EDU ---- */
   .entry{display:grid; grid-template-columns:150px 1fr; gap:18px; margin-bottom:26px;}
   .entry .when{font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); padding-top:2px;}
@@ -126,7 +159,7 @@
     .entry{grid-template-columns:1fr;}
     .skills-grid{grid-template-columns:1fr;}
   }
- 
+
   /* ---- FOOTER / CONTACT ---- */
   footer{
     background:var(--navy); color:#dbe5ef; padding:56px 0 40px; margin-top:40px;
@@ -142,7 +175,7 @@
 </head>
 <body>
 <div class="grid-bg"></div>
- 
+
 <nav>
   <div class="wrap">
     <div class="nav-mark">KH /// PORTFOLIO</div>
@@ -154,7 +187,7 @@
     </div>
   </div>
 </nav>
- 
+
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Open to Software Engineering &amp; Backend Roles</div>
@@ -173,7 +206,7 @@
     </div>
   </div>
 </header>
- 
+
 <section id="work">
   <div class="wrap">
     <div class="section-head">
@@ -181,7 +214,7 @@
       <h2>Selected Work</h2>
       <div class="rule"></div>
     </div>
- 
+
     <div class="project featured">
       <div class="project-top">
         <h3>Warehouse AI</h3>
@@ -208,7 +241,7 @@
         <a href="https://github.com/Kelvokel" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
     </div>
- 
+
     <div class="project">
       <div class="project-top">
         <h3>This Portfolio</h3>
@@ -222,7 +255,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="skills">
   <div class="wrap">
     <div class="section-head">
@@ -262,7 +295,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="experience">
   <div class="wrap">
     <div class="section-head">
@@ -270,7 +303,7 @@
       <h2>Experience &amp; Education</h2>
       <div class="rule"></div>
     </div>
- 
+
     <div class="entry">
       <div class="when">2025 — Present</div>
       <div>
@@ -279,7 +312,7 @@
         <p>Work directly with receiving, shipping, and inventory movement in a fast-paced manufacturing environment — the floor experience that shaped Warehouse AI's workflow design.</p>
       </div>
     </div>
- 
+
     <div class="entry">
       <div class="when">May 2022</div>
       <div>
@@ -288,7 +321,7 @@
         <p>Shadowed professional technology teams and learned business systems documentation and software development processes.</p>
       </div>
     </div>
- 
+
     <div class="entry">
       <div class="when">Expected May 2026</div>
       <div>
@@ -299,7 +332,7 @@
     </div>
   </div>
 </section>
- 
+
 <footer id="contact">
   <div class="wrap">
     <div class="section-head">
@@ -317,6 +350,6 @@
     <div class="bottom">Built and deployed with GitHub Pages.</div>
   </div>
 </footer>
- 
+
 </body>
 </html>
